@@ -1,0 +1,58 @@
+package accp6;
+
+
+class Renang {
+    String nama;
+    String teknik;
+
+    public Renang(String nama, String teknik) {
+        this.nama = nama;
+        this.teknik = teknik;
+    }
+
+    public void berenang() {
+        System.out.println(nama + " sedang menggunakan teknik " + teknik + " untuk berkarya.");
+    }
+
+    public void tampilkanProfil() {
+        System.out.println("Ini adalah " + nama + ", seorang Murid.");
+    }
+}
+
+class Murid extends Renang {
+    private String gaya;
+    private String alat;
+
+    public Murid(String nama, String gaya) {
+        super(nama, gaya);
+        this.gaya = gaya;
+        this.alat = alat;
+    }
+
+    @Override
+    public void berenang() {
+        System.out.println(nama + " belajar renang menggunakan gaya " + gaya +".");
+    }
+
+    public void belajar() {
+        System.out.println(nama + " sedang belajar dari guru Pak Eko.");
+    }
+}
+
+public class Accp6 {
+    public static void main(String[] args) {
+       
+        Murid murid1 = new Murid("agus", "dada");
+        murid1.berenang();
+        murid1.tampilkanProfil(); 
+        murid1.belajar();
+
+        System.out.println();
+
+     
+        Murid murid2 = new Murid("rahmat", "bebas");
+        murid2.berenang(); 
+        murid2.tampilkanProfil(); 
+        murid2.belajar();
+    }
+}
